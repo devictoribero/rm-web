@@ -6,7 +6,9 @@ const Blog = ({name}) => (
     <p>Tech blog {name}!</p>
   </div>
 )
+
 Blog.getInitialProps = async ({query}) => {
   return {name: query.name}
 }
+
 export default Blog

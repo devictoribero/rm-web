@@ -11,6 +11,7 @@
 
   &>article,
   &>section {
+    min-height: calc(100% - 154px);
     padding: 1rem;
   }
 }
