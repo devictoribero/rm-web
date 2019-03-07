@@ -1,0 +1,42 @@
+{
+  "name": "rmoral.com",
+  "version": "1.0.0",
+  "description": "https://rmoral.com website",
+  "keywords": [],
+  "author": "Rafael Moral Pareja <rafamp89@gmail.com>",
+  "license": "ISC",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "now-build": "next build",
+    "deploy": "now",
+    "icons": "easy-sprite -O ./static"
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "easy-svg-sprite": "^1.1.3",
+    "next": "^8.0.0-canary.11",
+    "prismjs": "^1.15.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "@s-ui/lint": "^2.21.0",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "next-compose-plugins": "^2.1.1",
+    "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/@s-ui/lint/eslintrc.js"
+    ]
+  },
+  "sasslintConfig": "./node_modules/@s-ui/lint/sass-lint.yml",
+  "browserslist": [
+    "last 2 versions",
+    "> 1%"
+  ]
+}

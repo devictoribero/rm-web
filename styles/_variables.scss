@@ -1,0 +1,46 @@
+// Colors
+$c-primary: #00acc1;
+$c-black: #000000;
+$c-white: #ffffff;
+
+$c-bg-body: #f9f9f9;
+$c-bg-light: #f7f7f9;
+$c-text: #333333;
+$c-text-hint: #999999;
+
+$c-border: #e1e1e8;
+$c-code: #e01e5a;
+$c-code-bg: #282c34;
+
+// Font sizes
+$fs-xs: .8rem;
+$fs-s: .9rem;
+$fs-m: 1rem;
+$fs-l: 1.2rem;
+$fs-xl: 1.5rem;
+$fs-xxl: 2rem;
+$fs-giant: 2.6rem;
+
+// Font families
+$ff-logo: 'Avenir Next',
+'Avenir',
+sans-serif;
+$ff-title: Georgia,
+Cambria,
+'Times New Roman',
+Times,
+serif;
+$ff-code: Monaco,
+Menlo,
+Consolas,
+'Courier New',
+monospace;
+
+// Line height
+$lh-m: 1.4;
+
+// Breakpoints
+$mobile: 480px;
+$tablet: 799px;
+$laptop: 960px;
+$desktop: 1140px;

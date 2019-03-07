@@ -1,0 +1,36 @@
+@import '../../../styles/forComponents';
+
+.rm-ProjectItem {
+  background-color: $c-white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 rgba($c-black, .2), 0 1px 1px 0 rgba($c-black, .14), 0 2px 1px -1px rgba($c-black, .12);
+  color: $c-text;
+  margin: 0 0 1rem;
+  padding: 1rem;
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    margin: 0 1%;
+    width: 23%;
+
+    &:hover {
+      text-decoration: none;
+
+      svg {
+        fill: $c-primary;
+        transition: .2s all ease;
+      }
+    }
+  }
+
+  &-icon {
+    margin: 0 .75rem 0 0;
+    vertical-align: middle;
+  }
+
+  &-desc {
+    display: block;
+    font-size: $fs-s;
+    margin: .5rem 0 0;
+  }
+}

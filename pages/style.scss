@@ -1,0 +1,35 @@
+@import '../styles/forComponents';
+
+.rm-Home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &-hero {
+    padding: 3rem 0;
+    text-align: center;
+    width: 100%;
+
+    &Img {
+      border: 1px solid $c-border;
+      border-radius: 100%;
+      object-fit: cover;
+      position: relative;
+    }
+
+    &Title {
+      font-family: $ff-logo;
+      font-size: $fs-giant;
+      font-variant: small-caps;
+      font-weight: 500;
+      letter-spacing: .2rem;
+      line-height: 1.2;
+      margin: 1rem 0 0;
+    }
+
+    &Subtitle {
+      color: $c-text-hint;
+      margin: 0;
+    }
+  }
+}

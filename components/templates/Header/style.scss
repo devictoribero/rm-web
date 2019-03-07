@@ -1,0 +1,76 @@
+@import '../../../styles/forComponents';
+
+.rm-Header {
+  background-color: $c-white;
+  border-bottom: 1px solid $c-border;
+  border-top: 6px solid $c-primary;
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+
+  &-logo {
+    color: $c-text;
+    font-family: $ff-logo;
+    font-size: $fs-xl;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    line-height: 1.4;
+    position: relative;
+
+    &:before,
+    &:after {
+      background-color: $c-primary;
+      content: '';
+      height: 3px;
+      position: absolute;
+      transition: .3s all ease;
+      width: 0;
+    }
+
+    &:before {
+      left: 0;
+      top: 0;
+    }
+
+    &:after {
+      bottom: 0;
+      right: 0;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    @media (min-width: $tablet) {
+      &:hover {
+        &:before,
+        &:after {
+          width: 25%;
+        }
+      }
+    }
+  }
+
+  &-btn {
+    cursor: pointer;
+    height: 31px;
+    left: 1rem;
+    opacity: 1;
+    position: absolute;
+    top: 1rem;
+    transition: .2s linear;
+    visibility: visible;
+    width: 31px;
+
+    @media (min-width: $tablet) {
+      &:hover {
+        fill: $c-primary;
+        transition: .2s all ease;
+      }
+    }
+
+    &--open {
+      transform: rotate(90deg);
+    }
+  }
+}

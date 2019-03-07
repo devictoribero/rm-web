@@ -1,0 +1,66 @@
+a {
+  color: $c-primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $ff-title;
+}
+
+p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+code,
+pre {
+  font-family: $ff-code !important;
+  hyphens: none;
+  line-height: 1.5;
+  overflow: auto;
+  tab-size: 2;
+  text-align: left;
+  white-space: pre;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+}
+
+code {
+  font-size: $fs-xs;
+}
+
+:not(pre)>code {
+  background-color: $c-bg-light;
+  border: 1px solid $c-border;
+  border-radius: 2px;
+  color: $c-code;
+  font-variant-ligatures: none;
+  padding: 2px 3px 1px;
+  tab-size: 4;
+  white-space: normal;
+}
+
+pre {
+  -webkit-overflow-scrolling: touch;
+  background: $c-code-bg;
+  color: $c-white;
+  margin: 0;
+  overflow: auto;
+  padding: 16px;
+}
+
+blockquote {
+  border-left: 5px solid $c-border;
+  margin: 0;
+  padding: .5rem 1rem;
+}

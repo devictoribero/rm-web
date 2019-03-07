@@ -1,0 +1,15 @@
+@import '../../../styles/forComponents';
+
+.rm-Footer {
+  background-color: $c-white;
+  border-top: 1px solid $c-border;
+  color: $c-text-hint;
+  display: flex;
+  font-size: $fs-xs;
+  justify-content: space-between;
+  padding: 1rem;
+
+  &-lnk {
+    padding: 0 5px;
+  }
+}

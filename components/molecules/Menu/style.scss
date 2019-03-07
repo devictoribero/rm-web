@@ -1,0 +1,72 @@
+@import '../../../styles/forComponents';
+
+.rm-Menu {
+  &-content {
+    background-color: $c-white;
+    height: 100%;
+    left: -240px;
+    padding: .2rem 0 .5rem;
+    position: fixed;
+    top: 0;
+    transition: all .3s ease;
+    width: 240px;
+    will-change: left;
+    z-index: 20;
+  }
+
+  &-link,
+  &-back {
+    display: block;
+
+    font-size: $fs-l;
+    line-height: 1;
+    padding: .5rem 1rem;
+    transition: all .1s ease;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    @media (min-width: $tablet) {
+      &:hover {
+        background-color: darken($c-white, 7%);
+      }
+    }
+  }
+
+  &-back {
+    cursor: pointer;
+
+    svg {
+      fill: $c-primary;
+    }
+  }
+
+  &-overlay {
+    background-color: rgba($c-text, .5);
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    width: 100vw;
+    will-change: opacity, visibility;
+    z-index: 10;
+  }
+
+  &--open &-content {
+    left: 0;
+  }
+
+  &--open &-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &--open+div {
+    left: 240px;
+  }
+}

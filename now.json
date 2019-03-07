@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "builds": [{ "src": "package.json", "use": "@now/next" }],
+  "routes": [
+    {
+      "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+",
+      "headers": { "cache-control": "max-age=31536000" }
+    },
+    { "src": "/tech/(?<name>[^/]+)$", "dest": "/tech?name=$name" }
+  ]
+}
