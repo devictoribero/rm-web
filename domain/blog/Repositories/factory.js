@@ -1,5 +1,6 @@
-import FirebaseBlogRepository from './FirebaseBlogRepository'
+import PrismicBlogRepository from './PrismicBlogRepository'
 
-export default class BlogFactory {
-  static firebaseBlogRepository = config => new FirebaseBlogRepository({config})
+export default class BlogRepositoriesFactory {
+  static prismicBlogRepository = ({config}) =>
+    new PrismicBlogRepository({config})
 }

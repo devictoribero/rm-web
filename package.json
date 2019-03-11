@@ -15,13 +15,16 @@
   },
   "dependencies": {
     "@material-ui/core": "^3.9.2",
+    "axios": "^0.18.0",
     "easy-svg-sprite": "^1.1.3",
-    "firebase": "^4.12.1",
-    "next": "^8.0.0-canary.11",
+    "next": "^8.0.3",
+    "prismic-dom": "^2.1.0",
+    "prismic-javascript": "^2.0.1",
+    "prismic-reactjs": "^0.3.2",
     "prismjs": "^1.15.0",
     "prop-types": "^15.7.2",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
   },
   "devDependencies": {
     "@s-ui/lint": "^2.21.0",

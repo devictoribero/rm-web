@@ -1,5 +1,9 @@
-import GetPostUseCase from './GetPostUseCase'
+import BlogRepositoriesFactory from '../Repositories/factory'
+import GetFrontendPostUseCase from './GetFrontendPostUseCase'
 
-export default class BlogFactory {
-  static getPostUseCase = () => new GetPostUseCase()
+export default class BlogUseCasesFactory {
+  static getFrontendPostUseCase = ({config}) =>
+    new GetFrontendPostUseCase({
+      repository: BlogRepositoriesFactory.prismicBlogRepository({config})
+    })
 }

@@ -9,10 +9,10 @@ import axios from 'axios'
 export default class AxiosFetcher extends Fetcher {
   /**
    * @param {Object} deps
-   * @param {Config} deps.config
+   * @param {Object} deps.config
    */
   constructor({config}) {
-    super({config})
+    super()
 
     this._axios = axios.create(config)
     // const perf = getPerf(config.get('serverRequestId') || 'default')
