@@ -1,28 +1,25 @@
-import axios from 'axios'
 import Repository from '../../helpers/Repository'
 
 export default class PrismicBlogRepository extends Repository {
   /**
    * @param {Object} deps
    * @param {Object} deps.config
+   * @param {Object} deps.fetcher
    */
-  constructor({config}) {
+  constructor({config, fetcher}) {
     super()
     this._config = config
+    this._fetcher = fetcher
   }
 
   getPost = async ({type, slug}) => {
-    const api = await this._config.get('API_URL')
+    const {url, headers} = await this._config.get('API_RESTDB')
 
-    const {data} = await axios.get(`${api}/${type}`, {
+    const {data} = await this._fetcher.get(`${url}/${type}`, {
       params: {
         q: {slug}
       },
-      headers: {
-        'content-type': 'application/json',
-        'x-apikey': '5c8954e0cac6621685acbedd',
-        'cache-control': 'no-cache'
-      }
+      headers
     })
     return {...data[0]}
   }

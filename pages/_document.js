@@ -19,6 +19,10 @@ export default class MyDocument extends Document {
             rel="preconnect dns-prefetch"
             href="https://res.cloudinary.com"
           />
+          <link
+            rel="preconnect dns-prefetch"
+            href="https://rmweb-c213.restdb.io"
+          />
         </Head>
         <body>
           <Main />
