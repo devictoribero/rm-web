@@ -1,14 +1,14 @@
-import prismicApi from './prismic'
 console.log('\n\nENV:', process.env.NODE_ENV, '\n\n')
 console.log('\n\n Internal:', !!process.env.INTERNAL, '\n\n')
 
+const API_URL = 'https://rmweb-c213.restdb.io/rest'
 export default class Config {
   /**
    * @constructor
    */
   constructor() {
     this._config = {
-      prismicApi
+      API_URL
     }
   }
 

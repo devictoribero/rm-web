@@ -1,6 +1,5 @@
-import PrismicBlogRepository from './PrismicBlogRepository'
+import HTTPBlogRepository from './HTTPBlogRepository'
 
 export default class BlogRepositoriesFactory {
-  static prismicBlogRepository = ({config}) =>
-    new PrismicBlogRepository({config})
+  static hTTPBlogRepository = ({config}) => new HTTPBlogRepository({config})
 }

@@ -1,6 +1,6 @@
 import UseCase from '../../helpers/UseCase'
 
-export default class GetFrontendPostUseCase extends UseCase {
+export default class GetArticlePostUseCase extends UseCase {
   /**
    * @constructor
    * @param {Object} deps

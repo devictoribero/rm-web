@@ -5,9 +5,9 @@ const importBlogUseCasesFactory = () =>
   import(/* webpackChunkName: "BlogUseCasesFactory" */ './blog/UseCases/factory')
 
 const useCases = {
-  get_frontend_post_use_case: [
+  get_article_post_use_case: [
     importBlogUseCasesFactory,
-    'getFrontendPostUseCase'
+    'getArticlePostUseCase'
   ]
 }
 

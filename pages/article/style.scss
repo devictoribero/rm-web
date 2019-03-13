@@ -1,0 +1,28 @@
+@import '../../styles/forComponents';
+
+.rm-Article {
+
+  h2,
+  h3,
+  h4 {
+    margin: 2rem 0 .5rem;
+  }
+
+  h2 {
+    font-size: $fs-xl;
+
+  }
+
+  p,
+  pre[class*='language-'] {
+    margin: 1rem 0;
+  }
+
+  blockquote {
+    margin: 1rem 0;
+
+    p {
+      margin: 0;
+    }
+  }
+}
