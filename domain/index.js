@@ -8,6 +8,10 @@ const useCases = {
   get_article_post_use_case: [
     importBlogUseCasesFactory,
     'getArticlePostUseCase'
+  ],
+  get_article_list_use_case: [
+    importBlogUseCasesFactory,
+    'getArticleListUseCase'
   ]
 }
 

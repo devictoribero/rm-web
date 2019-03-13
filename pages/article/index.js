@@ -19,10 +19,6 @@ const Article = ({article}) => {
     Prism.highlightAll()
   })
 
-  domain
-    .get('get_article_post_use_case')
-    .execute({slug: 'genera-sprite-libreria-iconos-svg'})
-
   if (!article) return <Error statusCode={404} />
 
   return (

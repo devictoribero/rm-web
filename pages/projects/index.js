@@ -9,7 +9,7 @@ const ProjectsPage = () => {
   return (
     <>
       <Head>
-        <title>rmoral</title>
+        <title>Projects - rmoral</title>
       </Head>
       <Layout>
         <section>

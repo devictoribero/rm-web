@@ -24,17 +24,17 @@ const Menu = ({isMenuOpen, toggleMenu}) => {
             />
           </span>
 
-          <Link href="/">
+          <Link prefetch href="/">
             <a className="rm-Menu-link" onClick={_handleMenuClick}>
               Inicio
             </a>
           </Link>
-          <Link href="/tech">
+          <Link prefetch href="/blog">
             <a className="rm-Menu-link" onClick={_handleMenuClick}>
               Blog
             </a>
           </Link>
-          <Link href="/projects">
+          <Link prefetch href="/projects">
             <a className="rm-Menu-link" onClick={_handleMenuClick}>
               Proyectos
             </a>

@@ -12,6 +12,16 @@ export default class PrismicBlogRepository extends Repository {
     this._fetcher = fetcher
   }
 
+  getList = async ({type}) => {
+    const {url, headers} = await this._config.get('API_RESTDB')
+
+    const {data} = await this._fetcher.get(`${url}/${type}`, {
+      headers
+    })
+
+    return {...data}
+  }
+
   getPost = async ({type, slug}) => {
     const {url, headers} = await this._config.get('API_RESTDB')
 
