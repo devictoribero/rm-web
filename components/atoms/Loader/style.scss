@@ -1,0 +1,39 @@
+
+@import '../../../styles/forComponents';
+
+.rm-Loader {
+  align-items: center;
+  background-color: rgba($c-white, .8);
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+
+  &-item {
+    animation: spin 750ms infinite linear;
+    border: .25rem solid rgba($c-primary, .6);
+    border-radius: 50%;
+    border-top-color: darken($c-primary, 10);
+    height: 30px;
+    width: 30px;
+  }
+
+  &--visible {
+    display: flex;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

@@ -14,12 +14,12 @@ import domain from '../../domain'
 import './style.scss'
 import 'prismjs/themes/prism-okaidia.css'
 
-const Article = ({article}) => {
+const Article = ({article, slug}) => {
   useEffect(() => {
     Prism.highlightAll()
   })
 
-  if (!article) return <Error statusCode={404} />
+  if (!slug) return <Error statusCode={404} />
 
   return (
     <>
@@ -44,7 +44,7 @@ Article.getInitialProps = async ({query}) => {
       .get('get_article_post_use_case')
       .execute({slug})
 
-    return {article}
+    return {article, slug}
   } catch (error) {
     return {error}
   }
@@ -57,7 +57,8 @@ Article.propTypes = {
     content: PropTypes.string.isRequired,
     readTime: PropTypes.number,
     updatedDate: PropTypes.string
-  })
+  }),
+  slug: PropTypes.string
 }
 
 export default Article
