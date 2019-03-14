@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Link from 'next/link'
 import './style.scss'
 
 const PostCard = ({title, slug, dateTime}) => (
@@ -8,7 +9,9 @@ const PostCard = ({title, slug, dateTime}) => (
       {dateTime}
     </time>
     <h3 className="rm-PostCard-title">
-      <a href={`/post/${slug}`}>{title}</a>
+      <Link href={`/article?slug=${slug}`}>
+        <a>{title}</a>
+      </Link>
     </h3>
   </aside>
 )
