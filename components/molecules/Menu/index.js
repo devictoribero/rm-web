@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import PropTypes from 'prop-types'
 import ClickAwayListener from '@material-ui/core/ClickAwayListener'
 import {Icon} from '../../atoms/Icon'
@@ -23,22 +22,19 @@ const Menu = ({isMenuOpen, toggleMenu}) => {
               height="24"
             />
           </span>
-
-          <Link prefetch href="/">
-            <a className="rm-Menu-link" onClick={_handleMenuClick}>
-              Inicio
-            </a>
-          </Link>
-          <Link prefetch href="/blog">
-            <a className="rm-Menu-link" onClick={_handleMenuClick}>
-              Blog
-            </a>
-          </Link>
-          <Link prefetch href="/projects">
-            <a className="rm-Menu-link" onClick={_handleMenuClick}>
-              Proyectos
-            </a>
-          </Link>
+          <a href="/" className="rm-Menu-link" onClick={_handleMenuClick}>
+            Inicio
+          </a>
+          <a href="/blog" className="rm-Menu-link" onClick={_handleMenuClick}>
+            Blog
+          </a>
+          <a
+            href="/projects"
+            className="rm-Menu-link"
+            onClick={_handleMenuClick}
+          >
+            Proyectos
+          </a>
         </nav>
       </ClickAwayListener>
 

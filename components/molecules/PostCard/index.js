@@ -9,7 +9,7 @@ const PostCard = ({title, slug, dateTime}) => (
       {dateTime}
     </time>
     <h3 className="rm-PostCard-title">
-      <Link href={`/article?slug=${slug}`}>
+      <Link href={`/article?slug=${slug}`} as={`/article/${slug}`}>
         <a>{title}</a>
       </Link>
     </h3>
