@@ -30,23 +30,21 @@ Con este mixin de Sass, podéis elipsar cualquier bloque de texto a las líneas 
 En el caso de que el número de líneas sea mayor a lo que realmente ocupa el texto, no os preocupéis, el texto se verá en su totalidad sin ningún efecto.
 
 ```scss
-@mixin ellipsis-multiline($font-size, $line-height, $lines-to-show, $margin:"0"){
+@mixin ellipsis-multiline($font-size, $line-height, $lines-to-show, $margin:"0") {
     $height-calc: $font-size*$line-height*$lines-to-show;
-    position: relative;
     display: block;
     display: -webkit-box;
+		font-size: $font-size*1px;
+		line-height: $line-height;
     max-height: ($height-calc + $margin)*1px;
-    font-size: $font-size*1px;
-    line-height: $line-height;
+		overflow: hidden;
+    position: relative;
+		text-overflow: ellipsis;
     -webkit-line-clamp: $lines-to-show;
     -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    p{
-        display: none;
-        &:first-of-type{
-            display: block;
-        }
+
+    p:not(:first-of-type) {
+      display: none;
     }
 }
 ```
