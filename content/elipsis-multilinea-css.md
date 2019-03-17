@@ -31,21 +31,21 @@ En el caso de que el número de líneas sea mayor a lo que realmente ocupa el te
 
 ```scss
 @mixin ellipsis-multiline($font-size, $line-height, $lines-to-show, $margin:"0") {
-    $height-calc: $font-size*$line-height*$lines-to-show;
-    display: block;
-    display: -webkit-box;
-		font-size: $font-size*1px;
-		line-height: $line-height;
-    max-height: ($height-calc + $margin)*1px;
-		overflow: hidden;
-    position: relative;
-		text-overflow: ellipsis;
-    -webkit-line-clamp: $lines-to-show;
-    -webkit-box-orient: vertical;
+  $height-calc: $font-size*$line-height*$lines-to-show;
+  display: block;
+  display: -webkit-box;
+  font-size: $font-size*1px;
+  line-height: $line-height;
+  max-height: ($height-calc + $margin)*1px;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
 
-    p:not(:first-of-type) {
-      display: none;
-    }
+  p:not(:first-of-type) {
+    display: none;
+  }
 }
 ```
 
