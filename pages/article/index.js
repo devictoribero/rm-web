@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import ReactMarkdown from 'react-markdown'
 import Prism from 'prismjs'
+import 'prismjs/components/prism-scss'
 // Components
 import {Layout} from '../../components/templates/Layout'
 import {PageTitle} from '../../components/atoms/PageTitle'

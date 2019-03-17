@@ -16,6 +16,13 @@ export default class PrismicBlogRepository extends Repository {
     const {url, headers} = await this._config.get('API_RESTDB')
 
     const {data} = await this._fetcher.get(`${url}/${type}`, {
+      params: {
+        h: {
+          $orderby: {
+            updatedDate: -1
+          }
+        }
+      },
       headers
     })
 
