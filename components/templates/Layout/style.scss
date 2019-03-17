@@ -1,8 +1,6 @@
 @import '../../../styles/forComponents';
 
 .rm-Layout {
-  background-color: $c-bg-body;
-  height: 100%;
   left: 0;
   margin: 0 auto;
   position: relative;
@@ -11,7 +9,7 @@
 
   &>article,
   &>section {
-    min-height: calc(100% - 154px);
+    background-color: $c-bg-body;
     padding: 1rem;
   }
 }
