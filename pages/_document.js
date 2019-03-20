@@ -41,6 +41,10 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta httpEquiv="x-ua-compatible" content="IE=edge" />
+          <meta
+            name="google-site-verification"
+            content="dxh_v9IXkCkKky0gl2Cmr-m00vbaHNzC7Hv0WYHESSQ"
+          />
           <link rel="icon" type="image/x-icon" href="/static/favicon.png" />
           <link
             rel="preconnect dns-prefetch"
