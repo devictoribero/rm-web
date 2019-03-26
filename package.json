@@ -8,9 +8,10 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "now-build": "next build",
-    "deploy:build": "npx now",
-    "deploy:release": "",
+    "export": "next build && next export -o dist",
+    "now-build": "next build && next export -o dist",
+    "deploy:stagging": "npx now --target staging",
+    "deploy:production": "npx now --target production",
     "icons": "easy-sprite -O ./static"
   },
   "dependencies": {
@@ -32,6 +33,7 @@
     "next-compose-plugins": "^2.1.1",
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "serve": "^10.1.2",
     "webpack-filter-warnings-plugin": "^1.2.1"
   },
   "eslintConfig": {

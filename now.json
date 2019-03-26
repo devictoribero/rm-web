@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "builds": [{ "src": "package.json", "use": "@now/next" }],
-  "routes": [
-    {
-      "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+",
-      "headers": { "cache-control": "max-age=31536000" }
-    },
-    { "src": "/article/(?<slug>[^/]+)$", "dest": "/article?slug=$slug" }
-  ]
+  "alias": "rmoral.com",
+  "builds": [{ "src": "package.json", "use": "@now/static-build" }],
+  "env": {
+    "NODE_ENV": "production"
+  }
 }

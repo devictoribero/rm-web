@@ -5,7 +5,15 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const FilterWarningsPlugin = require('webpack-filter-warnings-plugin')
 
 const nextConfig = {
-  target: 'serverless',
+  exportPathMap: function() {
+    return {
+      '/': {page: '/'},
+      '/blog': {page: '/blog'},
+      '/projects': {page: '/projects'},
+      '/article/elipsis-multilinea-css': {page: '/article', query: {slug: 'elipsis-multilinea-css'}},
+      '/article/genera-sprite-libreria-iconos-svg': {page: '/article', query: {slug: 'genera-sprite-libreria-iconos-svg'}}
+    }
+  },
   webpack: config => {
     // Fixes npm packages that depend on `fs` module
     config.node = {

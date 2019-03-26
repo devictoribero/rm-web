@@ -19,9 +19,9 @@ const Header = ({isMenuOpen, toggleMenu}) => {
         desc=""
         handleClick={_handleMenuClick}
       />
-      <Link href="/">
-        <a className="rm-Header-logo">rmoral</a>
-      </Link>
+      <a href="/" className="rm-Header-logo">
+        rmoral
+      </a>
     </header>
   )
 }

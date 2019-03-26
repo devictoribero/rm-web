@@ -11,6 +11,7 @@
 /dist
 /.next
 /src/.next
+/out
 
 # misc
 .DS_Store
