@@ -3,17 +3,10 @@ const withCSS = require('@zeit/next-css')
 const withSass = require('@zeit/next-sass')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const FilterWarningsPlugin = require('webpack-filter-warnings-plugin')
+const routes = require('./routes')
 
 const nextConfig = {
-  exportPathMap: function() {
-    return {
-      '/': {page: '/'},
-      '/blog': {page: '/blog'},
-      '/projects': {page: '/projects'},
-      '/article/elipsis-multilinea-css': {page: '/article', query: {slug: 'elipsis-multilinea-css'}},
-      '/article/genera-sprite-libreria-iconos-svg': {page: '/article', query: {slug: 'genera-sprite-libreria-iconos-svg'}}
-    }
-  },
+  exportPathMap: () => routes,
   webpack: config => {
     // Fixes npm packages that depend on `fs` module
     config.node = {
@@ -25,6 +18,11 @@ const nextConfig = {
         config.optimization.minimizer.push(new OptimizeCSSAssetsPlugin({}))
       }
     }
+
+    config.module.rules.push({
+      test: /\.md$/,
+      use: 'raw-loader'
+    })
 
     config.plugins.push(
       new FilterWarningsPlugin({

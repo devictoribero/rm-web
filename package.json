@@ -7,7 +7,7 @@
   "license": "ISC",
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "node ./bin/generateIndex.js && next build",
     "export": "next build && next export -o dist",
     "now-build": "next build && next export -o dist",
     "deploy:stagging": "npx now --target staging",
@@ -19,6 +19,7 @@
     "@rmoral/rm-js": "^1.3.1",
     "axios": "^0.18.0",
     "easy-svg-sprite": "^1.1.3",
+    "gray-matter": "^4.0.2",
     "next": "^8.0.3",
     "prismjs": "^1.15.0",
     "prop-types": "^15.7.2",
@@ -33,6 +34,7 @@
     "next-compose-plugins": "^2.1.1",
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "raw-loader": "^2.0.0",
     "serve": "^10.1.2",
     "webpack-filter-warnings-plugin": "^1.2.1"
   },

@@ -7,8 +7,6 @@ import {PageTitle} from '../../components/atoms/PageTitle'
 import {PageSubtitle} from '../../components/atoms/PageSubtitle'
 import {PostCard} from '../../components/molecules/PostCard'
 import {Layout} from '../../components/templates/Layout'
-// Others
-import domain from '../../domain'
 // Styles
 import './style.scss'
 
@@ -25,8 +23,7 @@ const formatDateSlash = stringDate => {
 }
 
 const Blog = ({list}) => {
-  const count = Object.keys(list).length
-  const listArray = Object.values(list)
+  const count = list.length
 
   return (
     <>
@@ -42,7 +39,7 @@ const Blog = ({list}) => {
             mucho más!
           </PageSubtitle>
           <div className="rm-Blog">
-            {listArray.map(({title, slug, updatedDate}) => (
+            {list.map(({title, slug, updatedDate}) => (
               <PostCard
                 title={title}
                 slug={slug}
@@ -58,13 +55,12 @@ const Blog = ({list}) => {
 }
 
 Blog.propTypes = {
-  list: PropTypes.object
+  list: PropTypes.array
 }
 
 Blog.getInitialProps = async () => {
   try {
-    const list = await domain.get('get_article_list_use_case').execute()
-
+    const {list} = await require('../../content/index.json')
     return {list}
   } catch (error) {
     return {error}
