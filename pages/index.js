@@ -3,8 +3,7 @@ import Head from 'next/head'
 import {Layout} from '../components/templates/Layout'
 import './style.scss'
 
-const Home = pepe => {
-  console.log(pepe)
+const Home = () => {
   return (
     <>
       <Head>
@@ -45,15 +44,6 @@ const Home = pepe => {
       </Layout>
     </>
   )
-}
-
-Home.getInitialProps = async () => {
-  try {
-    const pepe = await require('../routes.js')
-    return pepe
-  } catch (error) {
-    return {error}
-  }
 }
 
 export default Home
