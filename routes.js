@@ -1,16 +1,31 @@
-const routes = {
+const blogIndex = require('./content/index.json')
+
+const staticRoutes = {
   '/': {page: '/'},
   '/blog': {page: '/blog'},
   '/projects': {page: '/projects'},
-  '/article': {page: '/article'},
-  '/article/elipsis-multilinea-css': {
-    page: '/article',
-    query: {slug: 'elipsis-multilinea-css'}
-  },
-  '/article/genera-sprite-libreria-iconos-svg': {
-    page: '/article',
-    query: {slug: 'genera-sprite-libreria-iconos-svg'}
-  }
+  '/article': {page: '/article'}
 }
 
-module.exports = routes
+/**
+ * Add blog routes and return
+ * @param {Object} staticRoutes
+ */
+function withBlogRoutes(staticRoutes = {}) {
+  let routes = {
+    ...staticRoutes
+  }
+
+  blogIndex.list.forEach(post => {
+    const file = `/article/${post.slug}`
+
+    routes[file] = {
+      page: '/article',
+      query: {slug: post.slug}
+    }
+  })
+
+  return routes
+}
+
+module.exports = withBlogRoutes(staticRoutes)
