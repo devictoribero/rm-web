@@ -2,7 +2,7 @@
 title: Elipsis multilínea con CSS
 slug: elipsis-multilinea-css
 date: '2019-03-17'
-updatedDate: '2019-03-17'
+updatedDate: '2019-03-28'
 readTime: 120000
 topic: sass
 ---
@@ -61,4 +61,7 @@ El `margin` por defecto es 0, en el caso de que le añadas este css a un element
 Con estas variables, el mixin calcula el alto máximo que tendrá el bloque de contenido y el tamaño de la fuente.
 
 
-> Si queréis probalo en vivo, os dejo el enlace a Codepen con algunos ejemplos: [Ellipsis multiline with CSS (Mixin)](https://codepen.io/rmoralp/pen/KpaWYJ/)
+## Ejemplo
+
+<iframe height="500" style="width: 100%;" scrolling="no" title="Ellipsis multiline with CSS (Mixin)" src="//codepen.io/rmoralp/embed/KpaWYJ/?height=500&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+</iframe>

@@ -29,7 +29,7 @@ const Article = ({content, data}) => {
       <Layout>
         <article className="rm-Article">
           <PageTitle>{data.title}</PageTitle>
-          <ReactMarkdown source={content} />
+          <ReactMarkdown source={content} escapeHtml={false} />
         </article>
       </Layout>
     </>
