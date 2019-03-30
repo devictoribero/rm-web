@@ -7,7 +7,7 @@ readTime: 120000
 topic: tools
 ---
 
-> Muchos proyectos, que requieren de un set de iconos bastante estándar, utilizan **Font Awesome**, uno de los set de iconos más populares. Otros proyectos, que tienen la necesidad de tener algunos iconos propios en combinación con los que tenga la libreria, utilizan **Icomoon**, una herramienta que permite combinar iconos propios y de terceros. En este artículo os hablaré de la posibilidad de tener un set de iconos propio de una manera muy sencilla con **_[easy-svg-sprite](https://github.com/rmoralp/easy-svg-sprite)_**
+> Muchos proyectos, que requieren de un set de iconos bastante estándar, utilizan **Font Awesome**, uno de los set de iconos más populares. Otros proyectos, que tienen la necesidad de tener algunos iconos propios en combinación con los que tenga la libreria, utilizan **Icomoon**, una herramienta que permite combinar iconos propios y de terceros. En este artículo os hablaré de la posibilidad de tener un set de iconos propio de una manera muy sencilla con **_[la herramienta easy-svg-sprite](https://github.com/rmoralp/easy-svg-sprite)_**
 
 ## Qué es Easy SVG Sprite?
 
@@ -56,4 +56,4 @@ o
 
 ## Y recuerda...
 
-No dudes en reportar cualquier incidencia, sugerencia o mejora en la página de [easy-svg-sprite en Github](https://github.com/rmoralp/easy-svg-sprite/issues)
+No dudes en reportar cualquier incidencia, sugerencia o mejora en [la página de easy-svg-sprite en Github](https://github.com/rmoralp/easy-svg-sprite/issues)
