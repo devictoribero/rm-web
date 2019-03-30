@@ -40,7 +40,19 @@ function getIndexContent(dir, list) {
     fileContent.list.push(content.data)
   }
 
+  fileContent.list.sort(orderByUpdatedDateDesc)
+
   return JSON.stringify(fileContent)
+}
+
+/**
+ * Order by newer updated posts
+ * @param {Object} postA
+ * @param {Object} postB
+ * @returns {Boolean}
+ */
+function orderByUpdatedDateDesc(postA, postB) {
+  return +new Date(postA.updatedDate) < +new Date(postB.updatedDate)
 }
 
 const list = getContentList(INPUT_PATH)
