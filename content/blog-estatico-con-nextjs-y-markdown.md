@@ -7,7 +7,7 @@ readTime: 120000
 topic: nextjs
 ---
 
-Next.js tiene una funcionalidad muy interesante, llamada **static rendering**, que se centra en la idea de compilar la web y obtener archivos estáticos que se servirán directamente sin que se tenga que ejecutar ningún código en servidor.
+Next.js tiene una funcionalidad muy interesante, llamada **static rendering**, que se centra en la idea de compilar la web y obtener archivos estáticos que se servirán directamente sin tener que ejecutar ningún código en servidor.
 
 > Next.js exportará a una velocidad de 25 páginas por segundo. En base a un MacBook con 4 cores de CPU.
 
@@ -15,7 +15,7 @@ Los procedimientos explicados en este post se estan utilizando en esta misma pá
 
 ## Cómo utilizar Markdown para el contenido de los posts
 
-Primero tenemos que tener en cuenta que el nombre del archivo `.md` debe coincidir con el _slug_ que queramos tener en la url. Por ejemplo, el _slug_ de este post es "blog-estatico-con-nextjs-y-markdown", por lo tanto el archivo Markdown del post será `blog-estatico-con-nextjs-y-markdown.md`. Una vez hecho esto, creamos una carpeta donde se pondrán todos los posts.
+Primero tenemos que tener en cuenta que el nombre del archivo `{post-name}.md` debe coincidir con el _slug_ que queramos tener en la url. Por ejemplo, el _slug_ de este post es "blog-estatico-con-nextjs-y-markdown", por lo tanto el archivo Markdown del post será `blog-estatico-con-nextjs-y-markdown.md`. Una vez hecho esto, creamos una carpeta donde se pondrán todos los posts.
 
 A continuación, se debe crear una página para los posts, como por ejemplo `./pages/post.js`. En ésta página, procedemos a importar el contenido del post que se quiera visualizar mediante el método `getInitialProps` y utilizando la función `require`.
 
@@ -83,7 +83,7 @@ Para evitar procesos manuales, el archivo puede ser generado con un pequeño scr
 
 ## Generación automática de las rutas y exportación a archivos estáticos
 
-Para poder exportar la web a páginas estáticas en HTML, debemos **definir las rutas de las páginas en `next.config.js`** de la siguiente forma:
+Para poder exportar la web a páginas estáticas en HTML, debemos **definir las rutas de las páginas en el archivo `next.config.js`** de la siguiente forma:
 
 ```javascript
 module.exports = {

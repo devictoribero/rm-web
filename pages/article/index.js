@@ -5,6 +5,7 @@ import Head from 'next/head'
 import ReactMarkdown from 'react-markdown'
 import matter from 'gray-matter'
 import Prism from 'prismjs'
+import PrismJson from 'prismjs/components/prism-json' // eslint-disable-line
 import {HOSTNAME} from '../../helpers/config'
 // Components
 import {Layout} from '../../components/templates/Layout'
