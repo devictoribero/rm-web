@@ -1,8 +1,8 @@
 ---
 title: Cómo crear un blog estático con Next.js y Markdown
 slug: blog-estatico-con-nextjs-y-markdown
-date: '2019-04-01'
-updatedDate: '2019-04-01'
+date: '2019-03-31'
+updatedDate: '2019-03-31'
 readTime: 120000
 topic: nextjs
 ---
