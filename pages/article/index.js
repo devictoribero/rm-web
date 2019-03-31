@@ -5,14 +5,34 @@ import Head from 'next/head'
 import ReactMarkdown from 'react-markdown'
 import matter from 'gray-matter'
 import Prism from 'prismjs'
-import 'prismjs/components/prism-scss'
+import PrismJson from 'prismjs/components/prism-json' // eslint-disable-line
+import {HOSTNAME} from '../../helpers/config'
 // Components
 import {Layout} from '../../components/templates/Layout'
 import {PageTitle} from '../../components/atoms/PageTitle'
 import Error from '../_error'
 // Styles
-import './style.scss'
+import 'prismjs/components/prism-scss'
 import 'prismjs/themes/prism-okaidia.css'
+import './style.scss'
+
+const CustomArticleLink = ({href, children}) => {
+  const isExternal = href.match(HOSTNAME) === null
+  return (
+    <a
+      href={href}
+      target={isExternal && '_blank'}
+      rel={isExternal && 'nofollow noopener noreferrer'}
+    >
+      {children}
+    </a>
+  )
+}
+
+CustomArticleLink.propTypes = {
+  href: PropTypes.string,
+  children: PropTypes.node
+}
 
 const Article = ({content, data}) => {
   useEffect(() => {
@@ -29,7 +49,13 @@ const Article = ({content, data}) => {
       <Layout>
         <article className="rm-Article">
           <PageTitle>{data.title}</PageTitle>
-          <ReactMarkdown source={content} escapeHtml={false} />
+          <ReactMarkdown
+            source={content}
+            escapeHtml={false}
+            renderers={{
+              link: CustomArticleLink
+            }}
+          />
         </article>
       </Layout>
     </>
