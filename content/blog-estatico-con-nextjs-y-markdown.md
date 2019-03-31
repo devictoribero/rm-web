@@ -100,7 +100,7 @@ module.exports = {
 }
 ```
 
-Si tenemos una gran cantidad de posts, no es óptimo hacerlo manualmente, por eso, es preferible aprovechar el `.json` utilizado para listar los posts para generar las rutas. Se podría hacer de la siguiente manera:
+Si tenemos una gran cantidad de posts, no es óptimo hacerlo manualmente, por eso, es preferible aprovechar el `.json` utilizado para listar los posts para generar las rutas. Se podría hacer de la siguiente manera: 
 
 Archivo `routes.js`:
 
